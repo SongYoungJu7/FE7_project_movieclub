@@ -17,14 +17,14 @@ interface MovieState {
 
 const MOCK_MOVIES: Movie[] = [
   { id: "1", title: "Inception", year: 2010, genres: ["Sci-Fi"], rating: 8.8 },
-  //   {
-  //     id: "2",
-  //     title: "Interstellar",
-  //     year: 2014,
-  //     genres: ["Drama"],
-  //     rating: 8.6,
-  //   },
-  //   { id: "3", title: "Joker", year: 2019, genres: ["Crime"], rating: 8.4 },
+//   {
+//     id: "2",
+//     title: "Interstellar",
+//     year: 2014,
+//     genres: ["Drama"],
+//     rating: 8.6,
+//   },
+//   { id: "3", title: "Joker", year: 2019, genres: ["Crime"], rating: 8.4 },
 ];
 
 export const useMovieStore = create<MovieState>((set) => ({
