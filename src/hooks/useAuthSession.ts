@@ -7,7 +7,7 @@ import type { Session, User } from "@supabase/supabase-js";
 const updateUserOnlineStatus = async (user: User, isOnline: boolean) => {
   const { error } = await supabase
     .from("users")
-    .update({ is_online: isOnline, last_seen: new Date().toISOString() })
+    .update({ is_online: isOnline })
     .eq("id", user.id);
 
   if (error) {
