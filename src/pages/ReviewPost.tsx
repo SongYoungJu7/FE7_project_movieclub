@@ -34,7 +34,7 @@ export default function ReviewPostPage() {
   const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
 
   /* ------------------------
-      Fetch Movies from TMDB
+      Fetch Movies from TMDB Search API
   ------------------------ */
   useEffect(() => {
     setIsLoading(true);
