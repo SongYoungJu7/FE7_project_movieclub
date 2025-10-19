@@ -31,6 +31,7 @@ export default function ReviewPostPage() {
   const [query, setQuery] = useState("");
   const [selected, setSelected] = useState<MovieInReview | null>(null);
   const [isInputFocus, setIsInputFocus] = useState(false);
+  const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
 
   /* ------------------------
       Fetch Movies from TMDB
@@ -54,10 +55,10 @@ export default function ReviewPostPage() {
         const data: { results: Movie[] } = await response.json();
 
         const moviesData: MovieInReview[] = data.results.map(
-          ({ id, title, backdrop }) => ({
+          ({ id, title, backdrop_path }) => ({
             id,
             title,
-            backdrop: backdrop,
+            backdrop: `${IMAGE_BASE_URL}${backdrop_path}`,
           })
         );
 
