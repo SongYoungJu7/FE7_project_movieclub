@@ -12,7 +12,7 @@ export default function LoginPage() {
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "google",
         options: {
-          redirectTo: `${import.meta.env.VITE_URL}/login`,
+          redirectTo: `${import.meta.env.VITE_URL}/`,
         },
       });
       if (error) throw error;
@@ -42,7 +42,7 @@ export default function LoginPage() {
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "kakao",
         options: {
-          redirectTo: `${import.meta.env.VITE_URL}/login`,
+          redirectTo: `${import.meta.env.VITE_URL}/`,
         },
       });
       if (error) throw error;
